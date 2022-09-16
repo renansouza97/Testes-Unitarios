@@ -21,9 +21,10 @@ else
 endif
 
 C_COMPILER=gcc
-ifeq ($(shell uname -s), Darwin)
-C_COMPILER=clang
-endif
+CLANG_COMPILER=clang
+CPPCHECK=cppcheck
+VALGRIND=valgrind
+
 
 UNITY_ROOT=../Unity
 
@@ -52,12 +53,22 @@ SRC_FILES1=\
   test/test_runners/TestFoo_Runner.c \
   test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
-SYMBOLS=
 
 all: clean compile run
 
 compile:
-	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
+
+cppcheck:
+	$(CPPCHECK) --enable=all --suppress=missingIncludeSystem $(INC_DIRS) $(SRC_FILES1)
+
+valgrind:
+	$(C_COMPILER) -Wall -Wfatal-errors $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
+	$(VALGRIND) --leak-check=full --show-leak-kinds=all ./$(TARGET1) -v
+
+sanitizer:
+	$(CLANG_COMPILER) -Wall -Wfatal-errors -fsanitize=address $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
+	./$(TARGET1) -v
 
 run:
 	./$(TARGET1) -v
