@@ -11,3 +11,6 @@ Test results:
 License
 -------
 MIT License. See [LICENSE](LICENSE) for details.
+
+[license-url]: https://github.com/rafaelgaribotti/travis-identifier/blob/main/LICENSE
+[license-img]: https://img.shields.io/github/license/rsp/travis-hello-modern-cpp.svg
