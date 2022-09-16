@@ -17,4 +17,4 @@ jobs:
     - name: install
       run: "sudo apt-get install cppcheck; sudo apt-get install valgrind"
     - name: make
-      run: make
+      run: "cd work; make"
