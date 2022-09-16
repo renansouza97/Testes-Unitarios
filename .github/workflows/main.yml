@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: install
-      run: "sudo apt-get install cppcheck"
+      run: "sudo apt-get install cppcheck; sudo apt-get install valgrind"
     - name: make
       run: make
