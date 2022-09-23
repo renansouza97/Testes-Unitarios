@@ -24,3 +24,5 @@ jobs:
       run: "cd work; make valgrind"
     - name: sanitizer
       run: "cd work; make sanitizer"
+    - name: gcov
+      run: "cd work; make gcov"
