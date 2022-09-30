@@ -19,7 +19,9 @@ ifeq ($(OS),Windows_NT)
 else
 	CLEANUP = rm -f
 	MKDIR = mkdir -p
-	TARGET_EXTENSION=.out
+	TARGET_EXTENSION = .out
+	TARGET_EXTENSION1 = .gcda
+	TARGET_EXTENSION2 = .gcno
 endif
 
 C_COMPILER=gcc
@@ -49,10 +51,16 @@ CFLAGS += -ftest-coverage
 
 TARGET_BASE1=all_tests
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
+
 SRC_FILES1=\
   	$(UNITY_ROOT)/src/unity.c \
   	$(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
-  	src/quick_sort.c \
+	test/TestFoo.c \
+	test/test_runners/TestFoo_Runner.c \
+	test/test_runners/all_tests.c \
+
+SRC_FILES2=\
+	src/quick_sort.c \
 	src/merge_sort.c \
 	src/heap_sort.c \
 	src/selection_sort.c \
@@ -60,41 +68,31 @@ SRC_FILES1=\
 	src/bubble_sort.c \
 	src/radix_sort.c \
 	src/counting_sort.c \
-	src/sort.c main.c \
-	test/TestFoo.c \
-	test/test_runners/TestFoo_Runner.c \
-	test/test_runners/all_tests.c
+	src/sort.c \
+
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
 all: clean compile run
 
 compile:
-	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
+	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
 
 cppcheck:
-	$(CPPCHECK) --enable=all --suppress=missingIncludeSystem $(INC_DIRS) $(SRC_FILES1)
+	$(CPPCHECK) --enable=all --suppress=missingIncludeSystem $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2)
 
 valgrind:
-	$(C_COMPILER) -Wall -Wfatal-errors $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
+	$(C_COMPILER) -Wall -Wfatal-errors $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
 	$(VALGRIND) --leak-check=full --show-leak-kinds=all ./$(TARGET1) -v
 
 sanitizer:
-	$(CLANG_COMPILER) -Wall -Wfatal-errors -fsanitize=address $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
+	$(CLANG_COMPILER) -Wall -Wfatal-errors -fsanitize=address $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
 	./$(TARGET1) -v
 
 gcov: clean compile run
-	gcov -b $(SRC_FILES1)
+	gcov -b $(SRC_FILES2)
 
 run:
 	./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET1)
-
-
-# all: 
-# 	gcc -o app src/quick_sort.c src/merge_sort.c src/heap_sort.c src/selection_sort.c src/insertion_sort.c src/bubble_sort.c src/radix_sort.c src/counting_sort.c src/sort.c main.c
-
-# clean:
-# 	rm -f app
-
+	$(CLEANUP) *.out *.gc*
