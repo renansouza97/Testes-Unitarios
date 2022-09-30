@@ -72,7 +72,7 @@ SRC_FILES2=\
 
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
-all: clean compile run
+all: compile run clean
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
