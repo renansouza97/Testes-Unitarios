@@ -26,3 +26,5 @@ jobs:
       run: "cd work; make sanitizer"
     - name: gcov
       run: "cd work; make gcov"
+    - name: clean
+      run: "cd work; make clean"
