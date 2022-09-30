@@ -20,8 +20,6 @@ else
 	CLEANUP = rm -f
 	MKDIR = mkdir -p
 	TARGET_EXTENSION = .out
-	TARGET_EXTENSION1 = .gcda
-	TARGET_EXTENSION2 = .gcno
 endif
 
 C_COMPILER=gcc
@@ -70,6 +68,18 @@ SRC_FILES2=\
 	src/counting_sort.c \
 	src/sort.c \
 
+
+SRC_FILES3=\
+	quick_sort \
+	merge_sort \
+	heap_sort \
+	selection_sort \
+	insertion_sort \
+	bubble_sort \
+	radix_sort \
+	counting_sort \
+	sort
+
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
 all: compile run
@@ -88,8 +98,8 @@ sanitizer:
 	$(CLANG_COMPILER) -Wall -Wfatal-errors -fsanitize=address $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
 	./$(TARGET1) -v
 
-gcov: clean compile run
-	gcov -b $(SRC_FILES2)
+gcov: compile run
+	gcov -b $(SRC_FILES3)
 
 run:
 	./$(TARGET1) -v
