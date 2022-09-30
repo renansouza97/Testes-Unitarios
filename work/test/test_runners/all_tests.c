@@ -2,7 +2,7 @@
 
 static void RunAllTests(void)
 {
-  RUN_TEST_GROUP(Foo);
+  RUN_TEST_GROUP(Sort_Sucesso);
 }
 
 int main(int argc, const char * argv[])

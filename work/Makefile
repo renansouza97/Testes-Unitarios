@@ -53,8 +53,8 @@ TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
   	$(UNITY_ROOT)/src/unity.c \
   	$(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
-	test/TestFoo.c \
-	test/test_runners/TestFoo_Runner.c \
+	test/TestSortSucesso.c \
+	test/test_runners/TestSort_Runner.c \
 	test/test_runners/all_tests.c \
 
 SRC_FILES2=\
@@ -82,7 +82,7 @@ SRC_FILES3=\
 
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 
-all: compile run
+all: clean compile run
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
