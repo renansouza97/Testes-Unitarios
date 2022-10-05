@@ -164,8 +164,8 @@ TEST(Sort, TesteVetor_ValoresNegativosEPositivos)
 
 TEST(Sort, TesteComplexidade_OnBubble)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On";
   int algorithm = BUBBLE;
 
@@ -174,8 +174,8 @@ TEST(Sort, TesteComplexidade_OnBubble)
 
 TEST(Sort, TesteComplexidade_OnInsertion)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On";
   int algorithm = INSERTION;
 
@@ -184,8 +184,8 @@ TEST(Sort, TesteComplexidade_OnInsertion)
 
 TEST(Sort, TesteComplexidade_OnSelection)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On";
   int algorithm = SELECTION;
 
@@ -194,8 +194,8 @@ TEST(Sort, TesteComplexidade_OnSelection)
 
 TEST(Sort, TesteComplexidade_OnHeap)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On";
   int algorithm = HEAP;
 
@@ -204,8 +204,8 @@ TEST(Sort, TesteComplexidade_OnHeap)
 
 TEST(Sort, TesteComplexidade_OnMerge)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On";
   int algorithm = MERGE;
 
@@ -214,8 +214,8 @@ TEST(Sort, TesteComplexidade_OnMerge)
 
 TEST(Sort, TesteComplexidade_OnQuick)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On";
   int algorithm = QUICK;
 
@@ -224,8 +224,8 @@ TEST(Sort, TesteComplexidade_OnQuick)
 
 TEST(Sort, TesteComplexidade_On2Counting)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = COUNTING;
 
@@ -234,8 +234,8 @@ TEST(Sort, TesteComplexidade_On2Counting)
 
 TEST(Sort, TesteComplexidade_On2Radix)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = RADIX;
 
@@ -244,8 +244,8 @@ TEST(Sort, TesteComplexidade_On2Radix)
 
 TEST(Sort, TesteComplexidade_On2Heap)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = HEAP;
 
@@ -254,8 +254,8 @@ TEST(Sort, TesteComplexidade_On2Heap)
 
 TEST(Sort, TesteComplexidade_On2Merge)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = MERGE;
 
@@ -264,8 +264,8 @@ TEST(Sort, TesteComplexidade_On2Merge)
 
 TEST(Sort, TesteComplexidade_On2Quick)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = QUICK;
 
@@ -274,8 +274,8 @@ TEST(Sort, TesteComplexidade_On2Quick)
 
 TEST(Sort, TesteComplexidade_OnlognCounting)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "Onlogn";
   int algorithm = COUNTING;
 
@@ -284,8 +284,8 @@ TEST(Sort, TesteComplexidade_OnlognCounting)
 
 TEST(Sort, TesteComplexidade_OnlognRadix)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "Onlogn";
   int algorithm = RADIX;
 
@@ -294,8 +294,8 @@ TEST(Sort, TesteComplexidade_OnlognRadix)
 
 TEST(Sort, TesteComplexidade_OnlognBubble)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "Onlogn";
   int algorithm = BUBBLE;
 
@@ -304,8 +304,8 @@ TEST(Sort, TesteComplexidade_OnlognBubble)
 
 TEST(Sort, TesteComplexidade_OnlognInsertion)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "Onlogn";
   int algorithm = INSERTION;
 
@@ -314,8 +314,8 @@ TEST(Sort, TesteComplexidade_OnlognInsertion)
 
 TEST(Sort, TesteComplexidade_OnlognSelection)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "Onlogn";
   int algorithm = SELECTION;
 
@@ -324,8 +324,8 @@ TEST(Sort, TesteComplexidade_OnlognSelection)
 
 TEST(Sort, TesteComplexidade_CountingInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "on";
   int algorithm = COUNTING;
 
@@ -334,8 +334,8 @@ TEST(Sort, TesteComplexidade_CountingInvalida)
 
 TEST(Sort, TesteComplexidade_RadixInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "on";
   int algorithm = RADIX;
 
@@ -344,8 +344,8 @@ TEST(Sort, TesteComplexidade_RadixInvalida)
 
 TEST(Sort, TesteComplexidade_BubbleInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "on2";
   int algorithm = BUBBLE;
 
@@ -354,8 +354,8 @@ TEST(Sort, TesteComplexidade_BubbleInvalida)
 
 TEST(Sort, TesteComplexidade_InsertionInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "on2";
   int algorithm = INSERTION;
 
@@ -364,8 +364,8 @@ TEST(Sort, TesteComplexidade_InsertionInvalida)
 
 TEST(Sort, TesteComplexidade_SelectionInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "on2";
   int algorithm = SELECTION;
 
@@ -374,8 +374,8 @@ TEST(Sort, TesteComplexidade_SelectionInvalida)
 
 TEST(Sort, TesteComplexidade_HeapInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "onlogn";
   int algorithm = HEAP;
 
@@ -384,8 +384,8 @@ TEST(Sort, TesteComplexidade_HeapInvalida)
 
 TEST(Sort, TesteComplexidade_MergeInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "onlogn";
   int algorithm = MERGE;
 
@@ -394,8 +394,8 @@ TEST(Sort, TesteComplexidade_MergeInvalida)
 
 TEST(Sort, TesteComplexidade_QuickInvalida)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "onlogn";
   int algorithm = QUICK;
 
@@ -404,8 +404,8 @@ TEST(Sort, TesteComplexidade_QuickInvalida)
 
 TEST(Sort, TesteAlgoritmo_OnInvalido)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = 50;
 
@@ -414,8 +414,8 @@ TEST(Sort, TesteAlgoritmo_OnInvalido)
 
 TEST(Sort, TesteAlgoritmo_On2Invalido)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "On2";
   int algorithm = 50;
 
@@ -424,8 +424,8 @@ TEST(Sort, TesteAlgoritmo_On2Invalido)
 
 TEST(Sort, TesteAlgoritmo_OnlognInvalido)
 {
-  int length = 5;
-  int a[] = {2, -1, 0, 1, -2};
+  int length = 9;
+  int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
   char *type = "Onlogn";
   int algorithm = 50;
 

@@ -95,7 +95,7 @@ valgrind:
 	$(VALGRIND) --leak-check=full --show-leak-kinds=all ./$(TARGET1) -v
 
 sanitizer:
-	$(CLANG_COMPILER) -Wall -Wfatal-errors -fsanitize=address $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
+	$(C_COMPILER) -Wall -Wfatal-errors -fsanitize=address $(INC_DIRS) $(SRC_FILES1) $(SRC_FILES2) -o $(TARGET1)
 	./$(TARGET1) -v
 
 gcov: compile run
