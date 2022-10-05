@@ -132,6 +132,16 @@ TEST(Sort, TesteVetor_TamanhoMaximoInvalido)
   TEST_ASSERT_EQUAL(1, sort(a, length, type, algorithm));
 }
 
+TEST(Sort, TesteVetor_TamanhoNulo)
+{
+  int length = NULL;
+  char a[] = {15, 8, 9, 6, 3};
+  char *type = "On";
+  int algorithm = COUNTING;
+
+  TEST_ASSERT_EQUAL(1, sort(a, length, type, algorithm));
+}
+
 TEST(Sort, TesteVetor_ValoresRepetidos)
 {
   int length = 5;
