@@ -106,3 +106,4 @@ run:
 
 clean:
 	$(CLEANUP) *.out *.gc*
+
