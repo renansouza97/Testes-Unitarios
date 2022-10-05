@@ -16,7 +16,7 @@ TEST_GROUP_RUNNER(Sort)
   RUN_TEST_CASE(Sort, TesteVetor_TamanhoMinimoInvalido);
   RUN_TEST_CASE(Sort, TesteVetor_TamanhoMaximoInvalido);
   RUN_TEST_CASE(Sort, TesteVetor_ValoresRepetidos);
-  RUN_TEST_CASE(Sort, TesteVetor_ValoresNegativos);
+  //RUN_TEST_CASE(Sort, TesteVetor_ValoresNegativos);
   RUN_TEST_CASE(Sort, TesteVetor_ValoresNegativosEPositivos);
   RUN_TEST_CASE(Sort, TesteComplexidade_OnBubble);
   RUN_TEST_CASE(Sort, TesteComplexidade_OnInsertion);
