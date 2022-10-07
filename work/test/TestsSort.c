@@ -416,7 +416,7 @@ TEST(Sort, TesteAlgoritmo_OnInvalido)
 {
   int length = 9;
   int a[] = {15, 8, 9, 6, 3, 2, 1, 4, 7};
-  char *type = "On2";
+  char *type = "On";
   int algorithm = 50;
 
   TEST_ASSERT_EQUAL(1, sort(a, length, type, algorithm));
